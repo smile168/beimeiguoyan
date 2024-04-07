@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+other tools& installations:
+mac os:
+
+1. install git (may need brew)
+2. install node (version refer to Next.js App)
+3. vs code, extensions: mongodb
+
 ## Getting Started
 
 First, run the development server:
