@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb';
 
-export async function GET(req, res) {
+export async function GET(req) {
   const { searchParams } = new URL(req.url);
   const id = searchParams.get('id');
   const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.k20f2xq.mongodb.net/`;
@@ -8,7 +8,6 @@ export async function GET(req, res) {
   await client.connect();
   const db = client.db('Beimeiguoyan');
   const collection = db.collection('Cigarettes');
-  const document = await collection.findOne({ id: 'abc' });
-  res = new Response(JSON.stringify(document));
-  return res;
+  // console.log(await collection.findOne({ id: 'abc' }));
+  return new Response(JSON.stringify(await collection.findOne({ id: 'abc' })));
 }
