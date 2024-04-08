@@ -6,5 +6,5 @@ export async function getCigarettes() {
   await client.connect();
   const db = client.db('Beimeiguoyan');
   const collection = db.collection('Cigarettes');
-  return await collection.findOne({ id: 'abc' });
+  return collection.find({}).toArray();
 }
