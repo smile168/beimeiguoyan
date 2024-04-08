@@ -3,5 +3,5 @@ import { getCigarettes } from '../lib/Cigarettes';
 export default async function MobileHome() {
   const data = await getCigarettes();
   const id = data.id;
-  return <p>mobile home, with mongo {id}</p>;
+  return <p>mobile home, with mongo {id} restart</p>;
 }
