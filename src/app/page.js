@@ -12,5 +12,5 @@ export default function Home(props) {
   //   setIsMobile(mobileRegex.test(userAgent));
   // });
   // return <>{!isMobile ? <p>Desktop Home Page</p> : <MobileHome />}</>;
-  return <p>hello from home page</p>;
+  return <p className='text-blue-600'>hello from home page</p>;
 }
